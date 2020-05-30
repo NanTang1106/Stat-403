@@ -1,0 +1,72 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,fullpage,graphicx}
+\usepackage{subfigure}
+\usepackage{amssymb}
+\let\hat\widehat
+\let\tilde\widetilde
+
+
+\author{Nan Tang\\1662478}
+	%% your name
+\title{STAT 403 Spring 2018\\HW01}
+	%% title of this document
+\begin{document}
+\maketitle
+	%% make the title and author
+
+\section{Q1}
+
+\subsection{Q1-1}
+	%% you can copy and paste your R code and result within the verbatim environment
+%\begin{verbatim}
+%\end{verbatim}
+
+%%
+%% Hint: using \includegraphics{FILENAME} to include a graph.
+%% You need to place the figure to the same location as this template.
+%%
+
+\begin{align*}
+Bias(\bar{X}) &= \mathbb{E}(\bar{X}) - \beta \\
+&= \mathbb{E}(\frac{1}{n} \sum_{i=1}^{n}X_i) - \beta\\
+&= \frac{1}{n} \sum_{i=1}^{n} \mathbb{E}(X_i) - \beta \\
+&= \mathbb{E}(X_i) - \beta
+\end{align*}
+
+Note that $X$ follows an exponential distribution, the expected value for any sample from $X, X_i$ is equal to $\beta$.
+
+\begin{align*}
+Bias(\bar{X}) &= \beta - \beta = 0
+\end{align*}
+
+The sample average $\bar{X}$ is an unbiased estimator.
+
+\begin{align*}
+Var(\bar{X}) &= Var(\frac{1}{n} \sum_{i=1}^{n}X_i)) \\
+&= \frac{1}{n^2} \sum_{i=1}^{n} Var(X_i) \\
+\end{align*}
+
+The variance of $X_i$ from exponential distribution is equal to $\beta^2$.
+
+\begin{align*}
+Var(\bar{X}) &= \frac{1}{n^2} \sum_{i=1}^{n} \beta^2 \\
+&= \frac{\beta^2}{n}
+\end{align*}
+
+
+
+\subsection{Q1-2}
+
+
+
+\section{Q2}
+
+
+\section{Q3}
+
+
+
+
+%%% do not touch anything below
+\end{document}
